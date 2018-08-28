@@ -1,0 +1,285 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("fuentes/Open Sans.woff");
+}
+
+@font-face {
+  font-family: "Yanone Kaffeesatz";
+  src: url("fuentes/Yanone Kaffeesatz.woff");
+}
+
+/*--------------------------------------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;   
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    letter-spacing: 1,5px;
+}
+
+/*-------------------------------Header-------------------------------*/
+
+.header{
+    height: 60px;
+}
+.header .contenedor{
+    display: flex;
+    justify-content: space-between;
+}
+.logo, .icon-menu{
+    margin: 5px;
+    color: #eb6ea5;
+}
+.logo3{
+    margin: 5px;
+    color: #683f36;
+}
+.icon-menu{
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background: #683f36;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;
+}
+.icon-menu:hover{
+    background: #eb6ea5;
+    color: #683f36;
+}
+.logo__img{
+    width: 70px;
+    height: 60px; 
+}
+
+/*-------------------------------Menu-------------------------------*/
+
+.nav{
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    transition: all 0.4s;
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu__link{
+    display: block;
+    padding: 15px;
+    background: #683f36;
+    text-decoration: none;
+    color: #fff;
+}
+.menu__link:hover, .select{
+    background: #eb6ea5;
+    color: black;
+}
+.menu__item{
+    transition: all 0.4s; 
+}
+.mostrar{
+    left: 0%;
+    margin-left: auto;
+}
+
+/*-------------------------------Banner-------------------------------*/
+
+.banner{
+    margin-top: -150px;
+    position: relative;
+    z-index: -1000;
+    margin-bottom: 20px;
+}
+.banner .contenedor{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.banner .banner__img{
+    margin: 0 auto;
+}
+
+
+/*-------------------------------INFO-------------------------------*/
+
+
+.info{
+    margin: 450px;
+    text-align: center;
+
+    background: rgba(235,110,165,0.4);
+    padding: 15px;
+    margin-bottom: 30px;
+
+}
+
+td{
+    background: ;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+
+
+.info_title{
+    background: #fff;
+    color: #eb6ea5;
+    padding: 15px;
+    margin-bottom: 30px;
+
+}
+
+.section__titulo{
+    text-align: center;
+    font-size: 40px;
+    color: #eb6ea5;
+}
+.cursos__columna{
+    position: relative;
+    margin-bottom: 30px;
+}
+.cursos__descripcion{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    width: 60%;
+    height: 100%;
+    padding: 5px;
+}
+.cursos__titulo{
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+/*-------------------------------Social-------------------------------*/
+
+.footer{
+    background: #683f36;
+    color: #eb6ea5;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer .social [class^="icon-"]{
+    display: inline-block;
+    color: #683f36;
+    text-decoration: none;
+    font-size:30px;
+    padding: 10px;
+    background: white;
+    border-radius: 50%;
+    width:50px;
+    height: 50px;
+    line-height: 40px;
+}
+.footer .social .icon-facebook:hover{
+    color: #eb6ea5;
+}
+.footer .social .icon-youtube:hover{
+    color: #eb6ea5;
+}
+.footer .social .icon-gplus:hover{
+    color: #eb6ea5;
+}
+
+
+/*-------------------------------Pantalla extendida-------------------------------*/
+
+@media(min-width:480px){
+    .logo, .logo3 {
+        font-size:40px;
+    }
+    .banner .contenedor{
+    display: block;
+    transition: all 0.4s;
+    }
+    .info, .cursos{
+        display: flex;
+        justify-content: space-between;
+        margin-top: -120px;
+    }
+    .info__columna{
+        width: 32%;
+    }
+    info__titulo{
+        font-size: 30px;
+        margin: 5px 0;
+    }
+    .section__titulo{
+        width: 100%;
+    }
+    .cursos {
+        flex-wrap:wrap;
+        margin-top: 0;
+    }
+    .cursos__columna{
+        width: 49%;
+    }
+
+}
+
+@media(min-width:768px){
+    .banner .contenedor{
+    transform: translateX(-50%) translateY(-150%);
+    transition: all 0.4s;    
+    }
+    
+    .menu__item{
+    text-align: center;
+    transition: all 0.4s; 
+    max-width: 400px;
+    }
+}
+
+-----------------------------------------------------------
+.calculadora{
+  display:block;
+  margin:0 auto;
+  padding:20px;
+  width:300px;
+  height:500px;
+  border-radius: 25px;
+}
+.calculadora td button{
+  display:block;
+  width:70px;
+  height: 70px;
+  font-size: 25px;
+}
+#resultado{
+  display:block;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 50px;
+  width:300px;
+  height: 100px;
+  line-height: 100px;
+  background-color:#fff;
+  border-radius: 25px;
+  overflow-y: scroll;
+}
