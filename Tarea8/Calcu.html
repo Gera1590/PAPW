@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Donut and Pixels</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="css/estiloscal.css">
+        <link href="img/icons/styles.css" rel="stylesheet">
+	<script src="jquery-3.3.1.min.js"></script> 
+    </head>
+
+
+    <body onload="init();">
+        
+    <header class="header">
+      <div class="contenedor">
+        <img src="img/logo.jpg" alt="" class="logo__img">
+        <h1 class="logo">Donut</h1>
+        <h3 class="logo2">&</h3>
+        <h1 class="logo3">Pixels</h1>
+        <span class="icon-menu" id="btn-menu"></span>
+        <nav class="nav" id="navi">
+          <ul class="menu">
+            <li class="menu__item"><a href="index.html" class="menu__link">Inicio</a></li>
+            <li class="menu__item"><a href="Profile.html" class="menu__link">Perfil</a></li>
+            <li class="menu__item"><a href="Registro.html" class="menu__link">Registrarse</a></li>
+            <li class="menu__item"><a href="Calcu.html" class="menu__link select">Calculadora</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+   
+    <div class="banner">
+        <img src="img/donuts-logo.jpg" alt="" class="banner__img">
+        <div class="contenedor">
+            <h2 class="banner__titulo">Calculadora</h2>
+	    <p>Indique el numero de lados de su poligono regular y precione igual para obtener el resultado.</p>
+        </div>
+    </div>
+        
+
+
+		
+
+    <main class="main">
+        <div class="contenedor">
+            
+        <section class="info">
+
+	        <table class="calculadora">
+		<tr>
+  			<td colspan="3" class="screen"></td>
+			<input type="hidden" value="" class="outcome" />
+			
+		</tr>
+		<tr>
+  			<td><button href="7" class="val" id="siete">7</button></td>
+  			<td><button href="8" class="val" id="ocho">8</button></td>
+  			<td><button href="9" class="val" id="nueve">9</button></td>
+		</tr>
+		<tr>
+  			<td><button href="4" class="val" id="cuatro">4</button></td>
+  			<td><button href="5" class="val" id="cinco">5</button></td>
+  			<td><button href="6" class="val" id="seis">6</button></td>
+		</tr>
+		<tr>
+  			<td><button href="1" class="val" id="uno">1</button></td>
+  			<td><button href="2" class="val" id="dos">2</button></td>
+  			<td><button href="3" class="val" id="tres">3</button></td>
+		</tr>
+		<tr>
+  			<td><button href="=" class="equal" id="igual">=</button></td>
+  			<td><button href="0" class="val" id="cero">0</button></td>
+  			<td><button href="C" class="clear" id="reset">C</button></td>
+		</tr>
+
+
+		</table>
+	</section>
+
+
+	<script>
+		$(function(){
+    		$(".val").click(function(e){
+          		var a = $(this).attr("href");
+          		$(".screen").append(a);
+	  		$(".outcome").val($(".outcome").val() + a);
+    		});
+
+     		$(".equal").click(function(){
+	  		var res = (180*(($(".outcome").val())-2))/($(".outcome").val());
+	  		$(".screen").html(res);
+     		});
+
+     		$(".clear").click(function(){
+          		$(".screen").html("");
+     		});
+
+
+		})
+	</script>
+
+
+            
+        </div>
+    </main>
+        
+    <footer class="footer">
+        <div class="social">
+            <a href="" class="icon-facebook"></a>
+            <a href="" class="icon-youtube"></a>
+            <a href="" class="icon-gplus"></a>
+        </div>
+        <p class="copy">&copy; Donut&Pixels</p>
+    </footer>
+        
+
+        
+  </body>
+</html>
